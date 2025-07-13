@@ -1,0 +1,252 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0263b2b7;
+  padding: 40px;
+  gap: 30px;
+}
+
+.card {
+  flex: 1;
+  padding: 30px;
+  border-radius: 50px !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  background: white;
+  position: relative;
+}
+
+.card-left {
+  background: linear-gradient(135deg, #f3d9ff 50%, #cf80ff 50%);
+  color: #3a0a5c;
+}
+.cup-nft-section li{
+  list-style-type: none;
+}
+
+.card-right {
+  background: #c4e2f9 !important;
+  color: #10004f;
+  overflow: hidden;
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.email-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.captcha-box img {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.subscribe-btn,
+.start-btn {
+  background: black;
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.start-btn:hover{
+  background-color: #ffffff;
+  color: black;
+}
+
+.note {
+  font-size: 12px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.web3-heading {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.card-right p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  list-style: disc;
+}
+
+.image-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 200px;
+  overflow: hidden;
+  width: 180px;
+  pointer-events: none;
+}
+
+.character-img {
+  width: 300px;
+  transform: scale(1.7) translateY(50px);
+  z-index: 1;
+  position: relative;
+}
+
+.cup-nft-section {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 40px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  color: #3a0a5c;
+  border: 2px solid #cf80ff;
+  transition: transform 0.3s;
+}
+
+/* 💥 Bubble Pulse on Hover */
+.cup-nft-section:hover {
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(207, 128, 255, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+.cup-nft-section h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cup-nft-section ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.cup-nft-section li {
+  margin-bottom: 8px;
+}
+
+.nft-note {
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 10px;
+  color: #7a3e9d;
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.card-jump {
+  animation: jump 0.4s ease;
+}
+
+/* 🖼 Animate character image on hover */
+.card-right .image-wrapper {
+  transition: transform 0.3s ease;
+}
+
+.card-right:hover .image-wrapper {
+  transform: scale(1.1);
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .image-wrapper {
+    position: static;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .character-img {
+    width: 200px;
+    transform: scale(1.2) translateY(0);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card-right {
+    margin-top: 20px;
+  }
+
+  .image-wrapper {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .character-img {
+    width: 180px;
+    transform: scale(1.2) translateY(0);
+  }
+}

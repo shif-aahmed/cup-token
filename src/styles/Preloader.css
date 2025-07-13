@@ -1,0 +1,18 @@
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #8c1886;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  font-size: 2rem;
+  font-weight: bold;
+  clip-path: circle(150% at 50% 50%);
+  transition: clip-path 1.5s ease-in-out;
+}
+
+.preloader.hide {
+  clip-path: circle(0% at 50% 50%);
+}

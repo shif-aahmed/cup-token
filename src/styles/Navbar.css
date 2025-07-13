@@ -1,0 +1,33 @@
+.navbar {
+  position: sticky;
+  width: 95%;
+  margin: auto;
+  top: 30px;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  border-radius: 10px;
+}
+a.link{
+  color: black;
+  font-weight: 600;
+  margin-right: 2px;
+  border-radius: 5px;
+}
+a.link:hover{
+  border-radius: 5px;
+  background-color: rgba(0, 115, 255, 0.091);
+}
+a.getMetamask{
+    color: white;
+    background-color: #8c1886;
+    padding: 5px 10px;
+    border-radius: 70px;
+    display: grid;
+    place-items: center;
+}
+a.getMetamask:hover{
+  color: #8c1886;
+  background-color: white;
+  border: 2px solid #8c1886;
+}
+

@@ -1,0 +1,102 @@
+/* src/styles/About.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Fredoka", sans-serif;
+}
+.about-container {
+  background-color: #f5f5f5;
+  height:100vh;
+  width: 100vw;
+}
+.about-wrapper {
+  padding: 60px 20px;
+  /* background-color: red; */
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-hero {
+  text-align: center;
+  padding-bottom: 60px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #8c1886;
+  margin-bottom: 20px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: #000000;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-section {
+  background-color: #faeae0;
+  border-radius: 16px;
+  padding: 30px 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.09);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.about-section.show-section {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #0a1930;
+  margin-bottom: 15px;
+  border-left: 6px solid #3386ff;
+  padding-left: 12px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.7;
+}
+
+.about-section ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.about-section ul li {
+  background-color: #fff7f2;
+  margin-bottom: 12px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: #222;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border-left: 4px solid #011e49;
+}
+
+.about-section ul li:hover {
+  transform: translateX(6px);
+  background-color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
