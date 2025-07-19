@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavigationBar from './components/Navbar';
-import Home from './pages/home';
-import Features from './pages/Features';
-import About from './pages/About';
-import Tokenomics from './pages/Tokenomics';
-import Preloader from './components/Preloader';
+import NavigationBar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
+import Home from './pages/home.jsx';
+import Features from './pages/Features.jsx';
+import About from './pages/About.jsx';
+import Tokenomics from './pages/Tokenomics.jsx';
+import Preloader from './components/Preloader.jsx';
 import './App.css';
 
 function App() {
@@ -19,8 +20,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/features" element={<Features />} />
           <Route path="/about" element={<About />} />
-          <Route path="/Tokenomics" element={<Tokenomics />} />
+          <Route path="/Tokenomics" element={<Tokenomics />} /> 
         </Routes>
+        <Footer />
       </Router>
 
       {/* Preloader always on top of page */}

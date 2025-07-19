@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+
 import '../styles/About.css';
 
 const About = () => {
@@ -23,7 +24,7 @@ const About = () => {
   }, []);
 
   return (
-    
+
     <div className="about-wrapper">
       <header className="about-hero">
         <h1>About CUP Token</h1>
@@ -57,6 +58,7 @@ const About = () => {
         </p>
       </section>
     </div>
+
   );
 };
 

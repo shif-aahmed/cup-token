@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import "../styles/green.css";
+import "../styles/HeroImage.css";
 import heroImage from "../assets/hero-image.jpg";
 import appImage from "../assets/app.jpg";
 
-function Green() {
+function HeroImage() {
   const [containerStyle, setContainerStyle] = useState({
     width: "100vw",
     height: "100vh",
@@ -20,19 +20,52 @@ function Green() {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1201);
     };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // Disable scroll animation on mobile
-
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const maxScroll = window.innerHeight * 0.4;
-      const progress = Math.min(scrollY / maxScroll, 1);
+      const screenHeight = window.innerHeight;
+      const screenWidth = window.innerWidth;
 
-      const freezeThreshold = maxScroll + 400;
+if (screenWidth <= 768) {
+  const heroImage = document.querySelector(".hero-image");
+  const container = document.querySelector(".green-component");
+
+  if (heroImage) {
+    heroImage.style.position = "fixed";
+    heroImage.style.top = "0";
+    heroImage.style.left = "0";
+    heroImage.style.width = "100vw";
+    heroImage.style.height = "140vh"; 
+    heroImage.style.objectFit = "cover";
+    heroImage.style.zIndex = "-1"; 
+  }
+
+  if (container) {
+    container.style.position = "relative";
+    container.style.zIndex = "2";
+  }
+}
+
+      let maxScroll;
+      let extraOffset;
+
+      if (screenWidth < 768) {
+        maxScroll = screenHeight * 0.3;
+        extraOffset = 100;
+      } else if (screenWidth < 1200) {
+        maxScroll = screenHeight * 0.3;
+        extraOffset = 200;
+      } else {
+        maxScroll = screenHeight * 0.4;
+        extraOffset = 300;
+      }
+
+      const freezeThreshold = maxScroll + extraOffset;
+      const progress = Math.min(scrollY / maxScroll, 1);
 
       if (progress === 1 && scrollY > freezeThreshold) {
         if (!freezeScroll && picRef.current) {
@@ -66,8 +99,6 @@ function Green() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [freezeScroll, isMobile]);
-
-  if (isMobile) return null; // Don't render Green on mobile
 
   const heroOpacity = 1 - containerStyle.progress * 2;
   const appOpacity = containerStyle.progress * 2 - 1;
@@ -119,4 +150,4 @@ function Green() {
   );
 }
 
-export default Green;
+export default HeroImage;

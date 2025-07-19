@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/cards.css';
+import '../styles/Cards.css';
 
 const openLink = (url) => {
   window.open(url, '_blank');
@@ -7,7 +7,7 @@ const openLink = (url) => {
 
 const CryptoCards = () => {
   return (
-    <div className="container my-5">
+    <div className="container ">
       <div className="card-row-shift">
         {/* Card 1 */}
         <div className="col">

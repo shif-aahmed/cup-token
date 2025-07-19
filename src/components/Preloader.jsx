@@ -3,31 +3,20 @@ import logo from '../assets/pre-img.png';
 import { useEffect, useState } from 'react';
 
 const Preloader = ({ onFinish }) => {
-  const [startAnimation, setStartAnimation] = useState(false);
+  const [hide, setHide] = useState(false);
 
   useEffect(() => {
-    const waitTimer = setTimeout(() => {
-      setStartAnimation(true);
-    }, 100);
-
-    const removeTimer = setTimeout(() => {
+    const timer = setTimeout(() => {
+      setHide(true);
       if (onFinish) onFinish();
-    }, 2000);
+    }, 1800);
 
-    return () => {
-      clearTimeout(waitTimer);
-      clearTimeout(removeTimer);
-    };
+    return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
-    <div className={`preloader ${startAnimation ? 'hide' : ''}`}>
-      <img
-        src={logo}
-        alt="Logo"
-        height="100"
-        className="d-inline-block align-top me-2"
-      />
+    <div className={`preloader ${hide ? 'hide' : ''}`}>
+      <img src={logo} alt="Logo" height="100" />
     </div>
   );
 };

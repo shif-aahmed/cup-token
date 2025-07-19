@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import '../styles/info.css';
+import characterImage from '../assets/character.avif'; 
+import '../styles/Info.css';
 
 const CardComponent = () => {
   useEffect(() => {
-    // 🎁 Show a random NFT benefit
     const benefits = [
       'VIP platform access',
       'Enhanced staking yields',
@@ -17,7 +17,7 @@ const CardComponent = () => {
       bonusElement.textContent = `🎁 Bonus: ${random}`;
     }
 
-    // 💥 Right card jump effect
+
     const rightCard = document.querySelector('.card-right');
     if (rightCard) {
       rightCard.addEventListener('click', () => {
@@ -87,7 +87,8 @@ const CardComponent = () => {
         </p>
         <button className="start-btn">LEARN MORE</button>
         <div className="image-wrapper">
-          <img className="character-img" src="src\assets\character.avif" alt="Character" />
+          <img className="character-img" src={characterImage} alt="Character" />
+
         </div>
       </div>
     </div>

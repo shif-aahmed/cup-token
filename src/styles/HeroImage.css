@@ -66,11 +66,11 @@ html, body {
   font-family: "Fredoka", sans-serif;
   color: #3b0f63;
   line-height: 1.2;
-  position: fixed; 
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(var(--heading-scale, 0));
-  z-index: 1000; 
+  z-index: 1000;
   pointer-events: none;
   opacity: 0;
   width: 90%;
@@ -78,16 +78,38 @@ html, body {
   text-align: center;
 }
 
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.app-image {
+  width: 60vw;
+  max-width: 600px;
+  min-width: 300px;
+  transition: transform 0.3s ease;
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* 📱 Mobile View: Disable animation + shrink. Show static image & text */
 @media (max-width: 768px) {
+
   .pic-container {
     position: relative;
     width: 100vw !important;
-    height: 300px !important;
-    top: 0;
-    left: 0;
-    transform: none;
+    height: 100vh !important;
+    top: 0 !important;
+    left: 0 !important;
+    transform: none !important;
     border-radius: 0;
+    z-index: 1;
   }
 
   .image {
@@ -95,6 +117,7 @@ html, body {
     height: 100%;
     width: 100%;
     opacity: 1 !important;
+    z-index: 0;
   }
 
   .hero-heading2 {
@@ -109,4 +132,48 @@ html, body {
     text-align: center;
     scale: 1 !important;
   }
+}
+
+/* 📐 Only adjust app image between 769px and 800px */
+@media (min-width: 769px) and (max-width: 800px) {
+  .hero-heading2 {
+    font-size: 1.5rem;
+    padding: 15rem;
+  }
+
+  .app-image {
+    width: 20vw !important;
+  }
+}
+@media (max-width: 768px) {
+@media (max-width: 768px) {
+  .hero-heading2.gradient-text {
+    font-size: 2.8rem;
+    justify-content: center;
+    color: rgb(255, 255, 255) !important;
+    margin-top: 5rem !important;
+    margin-left: 3rem;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+       margin-top: 14rem !important;
+  }
+}
+ .hero-heading2{
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    text-align: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    will-change: opacity, transform;
+
+ }
+}
+
+@media (min-width: 1400px) {
+  .app-image {
+    width: 200px !important; /* or any fixed size you want */
+    /* max-width: 100%; */
+  }
+  
 }

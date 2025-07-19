@@ -1,9 +1,20 @@
-import HeroSection from '../components/HeroSection';
-import Green from '../components/Green';
-import Footer from '../components/Footer';
+import React, { useEffect, useState } from 'react';
+import HeroSection from '../components/HeroSection.jsx';
+import HeroImage from '../components/HeroImage.jsx';
+import CardComponent from '../components/Info.jsx';
 
 function Home() {
-  return (    
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
     <div>
       <style>
         {`
@@ -20,8 +31,8 @@ function Home() {
 
       <div className="page-reveal reveal mt-5">
         <HeroSection />
-        <Green/>
-        <Footer />
+          <HeroImage />
+        <CardComponent />
       </div>
     </div>
   );

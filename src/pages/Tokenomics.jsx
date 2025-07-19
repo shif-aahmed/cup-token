@@ -1,6 +1,6 @@
-// src/components/Tokenomics.jsx
+
 import React, { useEffect } from 'react';
-import '../styles/About.css'; // Reusing the same CSS
+import '../styles/About.css'; 
 
 const Tokenomics = () => {
   useEffect(() => {
@@ -24,6 +24,7 @@ const Tokenomics = () => {
   }, []);
 
   return (
+
     <div className="about-wrapper">
       <header className="about-hero">
         <h1>CUP Tokenomics</h1>
@@ -70,6 +71,7 @@ const Tokenomics = () => {
         </ul>
       </section>
     </div>
+
   );
 };
 

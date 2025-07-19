@@ -1,8 +1,8 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect, useState, useRef } from 'react';
-import CryptoCards from './cards';
-import CardComponent from '../components/info';
+import CryptoCards from './Cards';
+import animationGif from '../assets/animation.gif';
 import '../styles/HeroSection.css';
 
 function HeroSection() {
@@ -95,23 +95,14 @@ function HeroSection() {
         <button className="hero-button mt-4">Get CUP</button>
       </div>
 
-      {isMobile && (
-        <div className="mobile-hero-header">
-          <h2 className="mobile-hero-heading">
-            CUP is a deflationary DeFi token with staking, NFT rewards, and a 2M supply — 0.7% burned per transaction.
-          </h2>
-        </div>
-      )}
-
       {/* ✅ Show GIF only after hero image shrinks into app.jpg */}
       {showGif && (
         <div className={`floating-gif ${isFooterVisible ? 'hidden' : ''}`}>
-          <img src="src/assets/animation.gif" alt="CUP Animation" className="cat-gif" />
+          <img src={animationGif} alt="CUP Animation" className="cat-gif" />
         </div>
       )}
 
       <CryptoCards />
-      <CardComponent />
     </section>
   );
 }

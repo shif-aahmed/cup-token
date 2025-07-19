@@ -1,5 +1,5 @@
 .hero-section {
-  height:270vh;
+  /* height:270vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -8,51 +8,6 @@
   padding: 0 !important;
 }
 
-@media (max-width: 1233.99px) {
-  .hero-section {
-    height: 360vh !important;
-  }
-}
-@media (max-width: 1200px) {
-  .hero-section {
-    height: 380vh !important;
-  }
-}
-@media (max-width: 1000px) {
-  .hero-section {
-    height: 363vh !important;
-  }
-}
-@media (max-width: 900px) {
-  .hero-section {
-    height: 478vh !important;
-  }
-}
-@media (max-width: 768px) {
-  .hero-section {
-    height: 635vh !important;
-  }
-}
-@media (max-width: 418px) {
-  .hero-section {
-    height: 649vh !important;
-  }
-}
-@media (max-width: 410px) {
-  .hero-section {
-    height: 655vh !important;
-  }
-}
-@media (max-width: 394px) {
-  .hero-section {
-    height: 666vh !important;
-  }
-}
-@media (max-width: 435px) {
-  .hero-section {
-    height: 672vh !important;
-  }
-}
 .hero-heading {
   font-size: clamp(3rem, 10vw, 8.5rem);
   opacity: 0.9;
@@ -161,25 +116,7 @@
     height: 400px;
   }
 }
-/* Inside HeroSection.css */
-.mobile-hero-header {
-  width: 100%;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #8c1886;
-  text-align: center;
-  margin-top: 20px;
-  padding: 20px;
-}
 
-.mobile-hero-heading {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #ffffff;
-  font-family: "Fredoka", sans-serif;
-}
 @media (max-width: 768px) {
   .cat-gif {
     width: 150px;
@@ -190,4 +127,32 @@
   .cat-gif {
     width: 120px; 
   }
+}
+@media screen and (max-width: 768px) {
+  .hero-heading {
+    font-size: 5rem;
+    padding: 6px 10rem;
+  } 
+  
+}
+@media screen and (max-width: 535px) {
+  .hero-heading {
+    font-size: 5rem;
+    padding: 6px 6rem;
+  } 
+  
+}
+@media  (min-width: 1000px)and (max-width: 1500px) {
+  .hero-heading {
+    font-size: 7rem;
+    padding: 6px 8rem;
+  } 
+  
+}
+@media screen and (min-width: 1500px) {
+  .hero-heading {
+    font-size: 10rem !important;
+    padding: 6px 9rem !important;
+  } 
+  
 }

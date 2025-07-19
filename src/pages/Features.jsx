@@ -1,6 +1,6 @@
-// src/components/Features.jsx
+
 import React, { useEffect } from 'react';
-import '../styles/About.css'; // Using the same CSS
+import '../styles/About.css';
 
 const Features = () => {
   useEffect(() => {
@@ -24,6 +24,7 @@ const Features = () => {
   }, []);
 
   return (
+
     <div className="about-wrapper">
       <header className="about-hero">
         <h1>CUP Token Features</h1>
@@ -67,6 +68,7 @@ const Features = () => {
         </p>
       </section>
     </div>
+
   );
 };
 
