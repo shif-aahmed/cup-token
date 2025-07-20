@@ -304,3 +304,8 @@
   }
 
 }
+@media (max-width:693px){
+    .card-row-shift {
+    margin-top: 20rem;
+  }
+}
