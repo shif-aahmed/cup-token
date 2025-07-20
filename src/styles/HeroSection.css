@@ -109,16 +109,15 @@
   .hero-heading {
     line-height: 1;
     word-spacing: normal;
+    font-size: 5rem;
+    padding: 6px 10rem;
   }
   
   .layer-container {
     width: 250px;
     height: 400px;
   }
-}
-
-@media (max-width: 768px) {
-  .cat-gif {
+    .cat-gif {
     width: 150px;
   }
 }
@@ -128,13 +127,7 @@
     width: 120px; 
   }
 }
-@media screen and (max-width: 768px) {
-  .hero-heading {
-    font-size: 5rem;
-    padding: 6px 10rem;
-  } 
-  
-}
+
 @media screen and (max-width: 535px) {
   .hero-heading {
     font-size: 5rem;
@@ -154,5 +147,11 @@
     font-size: 10rem !important;
     padding: 6px 9rem !important;
   } 
+  
+}
+@media (max-width: 430px) {
+  .hero-heading {
+    text-align: center !important;
+  }
   
 }

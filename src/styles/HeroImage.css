@@ -121,59 +121,27 @@ html, body {
   }
 
   .hero-heading2 {
-    position: relative;
-    transform: none;
-    top: auto;
-    left: auto;
-    padding: 1rem;
-    margin-top: 1rem;
-    opacity: 1 !important;
-    pointer-events: auto;
-    text-align: center;
-    scale: 1 !important;
+    display: none !important;
   }
 }
 
-/* 📐 Only adjust app image between 769px and 800px */
 @media (min-width: 769px) and (max-width: 800px) {
-  .hero-heading2 {
-    font-size: 1.5rem;
-    padding: 15rem;
-  }
 
   .app-image {
     width: 20vw !important;
   }
 }
-@media (max-width: 768px) {
-@media (max-width: 768px) {
-  .hero-heading2.gradient-text {
-    font-size: 2.8rem;
-    justify-content: center;
-    color: rgb(255, 255, 255) !important;
-    margin-top: 5rem !important;
-    margin-left: 3rem;
-    background: none !important;
-    -webkit-background-clip: initial !important;
-    -webkit-text-fill-color: initial !important;
-       margin-top: 14rem !important;
-  }
-}
- .hero-heading2{
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important;
-    text-align: center;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    will-change: opacity, transform;
-
- }
-}
 
 @media (min-width: 1400px) {
   .app-image {
-    width: 200px !important; /* or any fixed size you want */
-    /* max-width: 100%; */
+    width: 200px !important;
+  }
+  
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  .hero-heading2 {
+    font-size: 2rem;
+    padding: 0 15rem !important;
   }
   
 }
