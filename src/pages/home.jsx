@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import HeroSection from '../components/HeroSection.jsx';
 import HeroImage from '../components/HeroImage.jsx';
 import CardComponent from '../components/Info.jsx';
+// import SecureFeatures from '../components/SecureFeatures.jsx';
+// import TiltCard from '../components/TiltCard.jsx'; 
 
 function Home() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -32,7 +34,10 @@ function Home() {
       <div className="page-reveal reveal mt-5">
         <HeroSection />
           <HeroImage />
+          {/* <TiltCard /> */}
+          {/* <SecureFeatures /> */}
         <CardComponent />
+        
       </div>
     </div>
   );

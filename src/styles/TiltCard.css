@@ -1,0 +1,35 @@
+    body {
+      background: #fbd5e4;
+      font-family: "Archivo Black", sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .tilt-card {
+      perspective: 1000px;
+      width: 260px;
+      height: 380px;
+    }
+
+    .tilt-inner {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(145deg, #ffffff, #ff6dfd);
+      color: #f4f4f4;
+      border-radius: 20px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease;
+      padding: 30px;
+      text-align: center;
+      transform-style: preserve-3d;
+    }
+
+    .tilt-inner h2 {
+      font-size: 5rem;
+      margin: 0px;
+      color: #830081;
+    }
