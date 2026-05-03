@@ -15,7 +15,7 @@ function Footer() {
         <div className="row">
           <hr className="mt-0" />
           
-          {/* Logo */}
+          {/* LOGO */}
           <div className="col-md-3 mb-4 d-flex align-items-start mt-3">
             <img src={logo} alt="CUP Token Logo" height="40" className="mb-3" />
           </div>
